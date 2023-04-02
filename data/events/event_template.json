@@ -1,0 +1,41 @@
+{
+	"category": "",
+	"clean": "",
+	"completed": false,
+	"date": { "$date": "2019-00-00T00:00:00.000Z" },
+	"description": "",
+	"file": {},
+	"images": {
+		"thumb": {
+			"file_type": "",
+			"base64": ""
+		},
+		"detail": {
+			"file_type": "",
+			"base64": ""
+		}
+	},
+	"instructor": {
+		"picture": {
+			"file_type": "",
+			"base64": ""
+		},
+		"name": "",
+		"phone": 0,
+		"title": "",
+		"email": ""
+	},
+	"location": {
+		"address": "",
+		"latitude": 0,
+		"longitude": 0,
+		"city": ""
+	},
+	"registration": {
+		"donation": false,
+		"participants": [],
+		"tickets": 0
+	},
+	"title": "",
+	"summary": ""
+}

@@ -1,0 +1,34 @@
+{
+	"category": "",
+	"clean": "",
+	"creator": {
+		"name": "",
+		"title": ""
+	},
+	"description": {
+		"large": "",
+		"small": "",
+		"summary": ""
+	},
+	"file": {},
+	"images": {
+		"detail": [
+			{
+				"base64": "",
+				"file_type": ""
+			}
+		],
+		"thumb": {
+			"base64": "",
+			"file_type": ""
+		}
+	},
+	"medium": "",
+	"price": 9900,
+	"sku": "",
+	"testimonial": {
+		"author": "",
+		"statement": ""
+	},
+	"title": ""
+}

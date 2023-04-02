@@ -1,0 +1,39 @@
+.modal
+	.modal__container
+		.modal__headline
+			.modal__header
+				.modal__center
+					h1(data-ng-bind='"Purchase " + vm.product.category')
+
+		.modal__reference
+			.modal__option.product
+				.modal__header
+					.modal__center
+						h5 Product
+				h2(data-ng-bind='::vm.product.title')
+					
+			.modal__option
+				.modal__header
+					.modal__center
+						h5 Price
+				h2(data-ng-bind='"$" + vm.friendly_price')
+
+			.modal__option--gap
+			.modal__option
+				.modal__header
+					.modal__center
+						h5 SKU
+				h2(data-ng-bind='::vm.product.sku')
+
+		.modal__tabs
+			.modal__tab(data-ng-class='{active: $state.includes("app.product.view.purchase.transaction.detail")}' data-ui-sref='app.product.view.purchase.transaction.detail')
+				h4 Details
+			.modal__tab.last(data-ng-class='{active: $state.includes("app.product.view.purchase.transaction.payment")}' data-ui-sref='app.product.view.purchase.transaction.payment')
+				h4 Payment
+
+		.modal__form(ui-view='form')
+
+	.modal__close(data-ng-click='::vm.close()' tabindex='-1')
+		h5 Close #[span.fa.fa-times]
+
+.backdrop(data-ng-click='::vm.close()')

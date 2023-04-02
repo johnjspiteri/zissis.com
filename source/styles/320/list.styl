@@ -1,0 +1,204 @@
+.listings
+	float left
+	width 300px
+	padding 0
+	margin 0 0 32px 10px
+
+.listing
+	display inline-block
+	vertical-align top
+	width 298px
+	padding 10px 0 0 0
+	margin 0 0 22px 0
+	font-size 16px
+	background $brown
+	border none
+	border $white-border
+	border-radius $border-radius
+	cursor pointer
+	overflow hidden
+
+	&__image
+		float left
+		width 276px
+		padding 0
+		margin 0 0 10px 10px
+		background $white
+		border $background-border
+		border-radius $border-radius
+		overflow hidden
+
+		img
+			float left
+			width 100%
+			padding 0
+			margin 0
+			z-index 1
+
+	&__content
+		float left
+		width 258px
+		padding 16px 20px 18px 20px
+		margin 0
+		background $white
+		border none
+		border-top $white-border
+		border-radius $border-radius-bottom
+
+	&__title
+		float left
+		width 100%
+		padding 0
+		margin 0 0 20px 0
+
+		h1
+			float left
+			max-width 216px
+			padding 10px 20px 10px 20px
+			margin 0
+			font-size 16px
+			line-height 27px
+			font-family $primary-font
+			font-weight $primary-font-weight
+			color $off-black
+			background #f4f4f4
+			border $background-border
+			border-radius $border-radius
+			text-align center
+
+	&__caption
+		width 100%
+		padding 0
+		margin 0
+		text-align center
+
+	&__center
+		display inline-block
+		position relative
+		padding 0
+		margin 0 0 7px 0
+		z-index 99
+
+		h5
+			float left
+			padding 0
+			margin 0
+			font-family $primary-font
+			font-weight $primary-font-weight
+			font-size 14px
+			line-height 14px
+			color $paragraph
+			text-align center
+
+	&__square
+		float left
+		padding 0
+		margin 0 0 26px 0
+
+		h2
+			float left
+			padding 8px 20px 8px 20px
+			margin 0
+			font-size 15px
+			line-height 25px
+			font-family $primary-font
+			font-weight $primary-font-weight
+			color $off-black
+			background #f4f4f4
+			border $background-border
+			border-radius $border-radius
+
+		p
+			float left
+			padding 0
+			margin 0
+			font-size 15px
+			line-height 27px
+			font-family $primary-font
+			font-weight $primary-font-weight
+			color $paragraph
+
+	&__square.price
+		margin 0 20px 22px 0
+
+	&__square.author
+		margin 0 0 22px 0
+
+	&__square.category
+		margin 0 20px 22px 0
+
+	&__square.sku
+		margin 0 0 22px 0
+
+	&__buttons
+		float left
+		width 268px
+		padding 0
+		margin 0
+
+	&__button
+		float left
+		width 134px
+		height 46px
+		padding 0
+		margin 0
+		background $black
+		border-radius $border-radius
+
+		h4
+			float left
+			width 100%
+			padding 0
+			margin 0
+			font-size 16px
+			line-height 47px
+			font-family $primary-font
+			font-weight $primary-font-weight
+			color $white
+			text-align center
+
+	&__button.red
+		width 114px
+		margin 0 10px 0 0
+		background $red
+
+.empty
+	float left
+	width 280px
+	padding 0
+	margin 0 0 70px 10px
+	border none
+
+	h1
+		float left
+		width 240px
+		padding 10px 20px 11px 20px
+		margin 0
+		font-size 18px
+		line-height 31px
+		font-family $primary-font
+		font-weight $primary-font-weight
+		color $off-black
+		background $white
+		border-radius $border-radius
+		text-align center
+
+	p
+		float left
+		width 260px
+		margin 0 0 0 10px
+		font-size 16px
+		line-height 30px
+		font-family $primary-font
+		font-weight $primary-font-weight
+		color $paragraph
+		text-align center
+
+		a
+			color $red
+
+	&__title
+		float left
+		width 100%
+		padding 0
+		margin 0 0 16px 0

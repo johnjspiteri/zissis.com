@@ -1,0 +1,83 @@
+nav
+	display block
+	float left
+	padding 0
+	margin 0 0 38px 0
+	border none
+
+.header
+	width 100%
+
+	&__holder
+		padding 22px 0 20px 0
+		margin 0
+
+	&__navigation
+		position relative
+		width 100%
+		padding 0
+		margin 0 auto
+
+	&__content
+		width 100%
+
+	&__heart
+		width 40px
+		margin 0 0 0 30px
+
+		.fa-heart
+			font-size 21px
+			line-height 21px
+
+	&__inline
+		margin 0
+
+		h1
+			margin 0 16px 0 0
+			font-size 19px
+			line-height 23px
+
+		h2
+			margin 5px 0 0 0
+			font-size 16px
+			line-height 16px
+
+	&__mobile
+		display none
+
+	&__button
+		float left
+		height 51px
+		padding 0 34px
+		margin 0
+		background $brown
+		border none
+		border-right $white-border
+		border-bottom $white-border
+		border-radius none
+		cursor pointer
+
+		h2
+			float left
+			width 100%
+			padding 0
+			margin 0
+			font-family $primary-font
+			font-weight $primary-font-weight
+			font-size 15px
+			line-height 55px
+			color $paragraph
+			border none
+			text-align center
+
+	&__button.last
+		border-radius 0 0 10px 0
+
+	&__button.active
+		height 52px
+		margin -1px 0 0 0
+		background $white
+		border-top none
+
+		h2
+			color $off-black

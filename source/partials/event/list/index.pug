@@ -1,0 +1,61 @@
+.search
+	.search__square
+		.search__select
+			.search__value
+				select(data-ng-model='vm.search.category' data-ng-change='vm.buildTags()' ng-options="category for category in vm.search.categories")
+				.search__mask
+					h4 {{vm.search.category || 'Category'}} #[span.fas.fa-caret-down]
+
+		.search__select
+			.search__value
+				select(data-ng-model='vm.search.genre' data-ng-change='vm.buildTags()' ng-options="genre for genre in vm.search.genres")
+				.search__mask
+					h4 {{vm.search.genre || 'Type'}} #[span.fas.fa-caret-down]
+
+		.search__filter
+			input(data-ng-model='vm.search.filter' placeholder='Title Filter')
+		.search__reset(data-ng-click='vm.reset()')
+			//h5 Reset #[span.fas.fa-times]
+			h5 #[span.fas.fa-times]
+
+	//.search__reset(data-ng-click='vm.reset()')
+	//	//h5 Reset #[span.fas.fa-times]
+	//	h5 #[span.fas.fa-times]
+
+.listings
+	.listing(data-ng-repeat='event in vm.events')
+		//| categoryFilter: vm.search.category | tagFilter: vm.search.tag | filter: {title: vm.search.filter}' ui-sref='app.event.view({clean: event.clean})
+		.listing__image
+			.listing__category
+				h4(data-ng-bind='event.category')
+			//img(ng-src='data:{{event.images.thumb.filetype}};base64,{{event.images.thumb.base64}}')
+			img(ng-src='assets/images/events/{{event.images.url}}')
+
+		.listing__content
+			h1(data-ng-bind='event.title')
+			.listing__square.date
+				.listing__title
+					h5 Date
+				h2 {{event.date | date: "longDate"}} @  {{event.date | date: "h:m a"}}
+			.listing__square.instructor
+				.listing__title
+					h5 Instructor
+				h2.blue(data-ng-bind='event.contact.name')
+			.listing__square
+				.listing__title
+					h5 Location
+				h2(data-ng-bind='event.location.address + ", " + event.location.city')
+
+			.listing__square
+				.listing__title
+					h5 Description
+				p(data-ng-bind='event.description')
+
+			.listing__register
+				h4 Register Now
+
+			//.listing__tags
+				.listing__tag
+					h4(data-ng-bind='event.category')
+				.listing__tag.register
+					h4 Register Now

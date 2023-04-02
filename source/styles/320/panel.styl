@@ -1,0 +1,111 @@
+md-sidenav.md-closed
+	display none
+
+md-sidenav
+	position fixed
+	width 300px
+	max-width 300px
+	height 100%
+	min-height 100%
+	bottom 0
+	background none
+	outline none
+	overflow none
+	box-sizing border-box
+	left 0
+	top 0
+	z-index 999999
+	-webkit-transform translate3d(0%, 0, 0)
+	transform translate3d(0%, 0, 0)
+	overflow scroll
+
+md-sidenav.md-closed
+	-webkit-transform translate3d(-100%, 0, 0);
+	transform translate3d(-100%, 0, 0);
+
+md-sidenav.md-closed-remove
+	display -webkit-flex;
+	display -ms-flexbox;
+	display flex;
+	transition all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+md-sidenav.md-closed-add.md-closed-add-active, md-sidenav.md-closed-remove.md-closed-remove-active
+	transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+md-sidenav.md-locked-open-add,
+md-sidenav.md-locked-open-remove
+	position: static;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+
+.panel
+	float left
+	height 100%
+	min-height 100%
+	padding 0
+	margin 0
+	background $background
+	border-right 1px solid #000
+
+	&__buttons
+		float left
+		width 164px
+		padding 22px 18px 0 18px
+		margin 0
+
+	&__button
+		float left
+		width 162px
+		padding 0
+		margin 0 0 12px 0
+		background $black
+		border-radius 10px
+		text-align center
+		cursor pointer
+		outline none
+
+		h1
+			float left
+			width 100%
+			padding 18px 0 18px 0
+			margin 0
+			font-size 16px
+			line-height 16px
+			font-family $primary-font
+			font-weight $primary-font-weight
+			color $white
+			text-align center
+			outline none
+
+	&__button.active
+		background $red
+
+	&__close
+		float left
+		width 34px
+		height 52px
+		padding 0 4px 0 0
+		margin 21px 0 0 -1px
+		background $background
+		border 1px solid #000
+		border-left none
+		border-radius 0 4px 4px 0
+		cursor pointer
+		outline none
+
+		.fa-angle-left
+			float left
+			width 100%
+			padding 0
+			margin 0
+			font-size 24px
+			line-height 54px
+			color $off-black
+			text-align center
+			cursor pointer
+
+.panel::-webkit-scrollbar
+	width: 0 !important

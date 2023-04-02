@@ -1,0 +1,41 @@
+{
+	"category": "HeartMath",
+	"clean": "healing-and-emotional-clarity-1",
+	"completed": false,
+	"date": { "$date": "2019-05-22T09:00:00.000Z" },
+	"description": "Powerful customized workshops to increase vitality, well being, staff morale, team efficiency and cohesion. Powerful customized workshops to increase vitality, well being, staff morale, team efficiency and cohesion. Powerful customized workshops to increase vitality, well being, staff morale, team efficiency and cohesion.",
+	"file": {},
+	"images": {
+		"thumb": {
+			"file_type": "",
+			"base64": ""
+		},
+		"detail": {
+			"file_type": "",
+			"base64": ""
+		}
+	},
+	"instructor": {
+		"picture": {
+			"file_type": "",
+			"base64": ""
+		},
+		"name": "Zissis Liolios",
+		"phone": 4165554444,
+		"title": "Instructor",
+		"email": "zissis@zissisliolios.com"
+	},
+	"location": {
+		"address": "1 King Street West",
+		"latitude": 43.649122,
+		"longitude": -79.378167,
+		"city": "Toronto"
+	},
+	"registration": {
+		"donation": false,
+		"participants": [],
+		"tickets": 30
+	},
+	"title": "Healing & Emotional Clarity I",
+	"summary": "Powerful customized workshops to increase vitality, well being, staff morale, team efficiency and cohesion."
+}

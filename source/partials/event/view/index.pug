@@ -1,0 +1,27 @@
+.slider
+	slick(settings='vm.slickConfig' ng-if='vm.project.images')
+		div(data-ng-repeat='image in vm.project.images', data-thumb='data:{{image.filetype}};base64,{{image.base64}}')
+			img(ng-src='data:{{image.filetype}};base64,{{image.base64}}')
+
+.view
+	.view__arrow(ui-sref='app.product.list')
+		.fa.fa-long-arrow-left
+	.view__content
+		.view__entry
+			//h1(data-ng-bind='vm.product.title')
+			h1 Testing
+			h2(data-ng-bind='vm.product.location.neighbourhood + ","')
+			h2.blue(data-ng-bind='vm.product.location.city')
+		//.view__tags
+			.view__tag(data-ng-repeat='tag in vm.product.tags')
+				h4(data-ng-bind='tag')
+
+		p(data-ng-bind='vm.product.description')
+
+.view
+	.view__content
+		.view__entry
+			h1 Testimonial
+
+		p.italic Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+		h3 Client's Name

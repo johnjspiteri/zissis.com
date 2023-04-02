@@ -1,0 +1,18 @@
+md-sidenav.md-sidenav.md-closed(md-component-id='panel' md-disable-backdrop esc-key='vm.close()')
+	.panel
+		.panel__buttons
+			.panel__button(ui-sref='app.index' data-ng-click='vm.close()' ui-sref-active='active')
+				h1 Home
+			.panel__button(ui-sref='app.math' data-ng-click='vm.close()' ui-sref-active='active')
+				h1 HeartMath &trade;
+			.panel__button(ui-sref='app.imagery' data-ng-click='vm.close()' ui-sref-active='active')
+				h1 Heart Imagery
+			.panel__button(ui-sref='app.coaching' data-ng-click='vm.close()' ui-sref-active='active')
+				h1 Coaching
+			.panel__button(ui-sref='app.about' data-ng-click='vm.close()' ui-sref-active='active')
+				h1 About
+
+	.panel__close(data-ng-click='vm.close()')
+		.far.fa-angle-left
+
+.backdrop(ng-show='vm.backdrop')

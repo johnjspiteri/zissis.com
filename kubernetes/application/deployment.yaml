@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    labels:
+        app: application
+    name: application
+    namespace: a
+spec:
+    replicas: 1
+    strategy:
+        type: RollingUpdate
+        rollingUpdate:
+            maxSurge: 1
+            maxUnavailable: 0
+    selector:
+        matchLabels:
+            app: application
+    template:
+        metadata:
+            labels:
+                app: application
+        spec:
+            terminationGracePeriodSeconds: 60
+            containers:
+              - name: application
+                image: docker.io/zissis/application:v2
+                imagePullPolicy: Always
+                ports:
+                  - containerPort: 8080
+                    name: http
+            imagePullSecrets:
+                - name: docker-secret

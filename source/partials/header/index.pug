@@ -1,0 +1,30 @@
+header
+	.header__container
+		.header
+			.header__holder
+				.header__content
+					.header__heart(ui-sref='app.index')
+						.fas.fa-heart
+					.header__inline
+						h1(ui-sref='app.index') Zissis Liolios
+						h2 Empowering Heart Wisdom&trade;
+
+					.header__name
+						h1(ui-sref='app.index') Zissis Liolios
+					.header__mobile(data-ng-click='vm.open()')
+						.far.fa-bars
+					.header__tagline
+						h2 Empowering Heart Wisdom&trade;
+
+			.header__navigation
+				nav
+					.header__button.first(ui-sref='app.index' ui-sref-active='active')
+						h2 Home
+					.header__button(ui-sref='app.math' ui-sref-active='active')
+						h2 HeartMath &trade;
+					.header__button(ui-sref='app.imagery' ui-sref-active='active')
+						h2 Heart Imagery
+					.header__button(ui-sref='app.coaching' ui-sref-active='active')
+						h2 Coaching
+					.header__button.last(ui-sref='app.about' ui-sref-active='active')
+						h2 About

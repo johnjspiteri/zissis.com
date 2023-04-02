@@ -1,0 +1,25 @@
+{
+	"images": {
+		"thumb": {
+			"file_type": "",
+			"base64": ""
+		},
+		"detail": []
+	},
+	"category": "Video",
+	"clean": "yoga-training-video-1",
+	"creator": {
+		"picture": {
+			"file_type": "",
+			"base64": ""
+		},
+		"name": "Zissis Liolios",
+		"title": "Mediator"
+	},
+	"description": "In this episode of The Peaceful Warrior, we explore how some guys get no girls, and others get a lot.",
+	"file": {},
+	"price": 19.99,
+	"title": "Yoga Training Video 1",
+	"sku": "YT1000",
+	"summary": "This is a short version of this text."
+}

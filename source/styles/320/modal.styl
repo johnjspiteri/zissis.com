@@ -1,0 +1,448 @@
+.modal
+	position absolute
+	width 300px
+	height 100%
+	padding 0
+	margin 0 0 0 -150px
+	top 15px
+	left 50%
+	z-index 99999
+
+	&__container
+		float left
+		width 298px
+		padding 22px 0 0 0
+		margin 0
+		background $white
+		border $black-border
+		border-radius $border-radius
+
+	&__container.ng-invalid
+		background $secondary
+
+	&__reference
+		float left
+		width 236px
+		padding 18px 10px 18px 10px
+		margin 0 0 0 20px
+		background $background
+		border $background-border
+		border-radius $border-radius
+
+	&__option
+		float left
+		width 113px
+		padding 0
+		margin 0
+
+		h2
+			float left
+			width 111px
+			padding 5px 0 6px 0
+			margin 0
+			font-family $primary-font
+			font-weight $primary-font-weight
+			font-size 16px
+			line-height 24px
+			color $off-black
+			background $white
+			border $input-border
+			border-radius $border-radius
+			text-align center
+
+	&__option.product
+		width 100%
+		margin 0 0 20px 0
+
+		h2
+			width 234px
+
+	&__option--gap
+		float left
+		width 10px
+		height 10px
+
+	&__spacer
+		float left
+		width 100%
+		height 20px
+		padding 0
+		margin 0
+
+	&__tabs
+		float left
+		width 278px
+		height 50px
+		padding 0 0 0 20px
+		margin 32px 0 0 0
+		border none
+		border-bottom 1px solid #c8c8c8
+
+	&__tab
+		float left
+		width 128px
+		height 50px
+		padding 0
+		margin 0
+		background $button
+		border $black-border
+		border-radius 10px 0 0 0
+
+		h4
+			float left
+			width 100%
+			padding 0
+			margin 0
+			font-family $primary-font
+			font-weight $primary-font-weight
+			font-size 17px
+			line-height 52px
+			color $white
+			border none
+			outline none
+			text-align center
+
+	&__tab.active
+		height 51px
+		background $background
+		border $white-border
+
+		h4
+			color $off-black
+
+	&__tab.last
+		border-left none
+		border-radius 0 10px 0 0
+
+	&__form
+		float left
+		width 258px
+		padding 38px 20px 20px 20px
+		margin 0
+		background $background
+		border-radius: $border-radius-bottom
+
+	&__close
+		float left
+		width 110px
+		height 40px
+		padding 0
+		margin 0 0 20px 140px
+		background $black
+		border $black-border
+		border-top none
+		border-radius $border-radius-bottom
+		cursor pointer
+
+		h6
+			float left
+			width 100%
+			padding 0
+			margin 0
+			font-family $primary-font
+			font-weight $primary-font-weight
+			font-size 16px
+			line-height 38px
+			color $white
+			text-align center
+
+		.fa-times
+			padding 0
+			margin 0 0 0 8px
+			font-size 16px
+			color $white
+
+	&__headline
+		float left
+		width 258px
+		padding 0
+		margin 0 0 18px 20px
+		text-align center
+
+	&__paragraph
+		float left
+		width 100%
+		padding 0
+		margin 12px 0 10px 0
+		text-align center
+
+		p
+			float left
+			width 100%
+			padding 0
+			margin 0
+			font-family $primary-font
+			font-weight $primary-font-weight
+			font-size 16px
+			line-height 29px
+			color $paragraph
+			text-align center
+
+	&__header
+		float left
+		width 100%
+		padding 0
+		margin 0 0 10px 0
+		text-align center
+
+	&__center
+		display inline-block
+		position relative
+		z-index 99
+
+		h1
+			float left
+			padding 11px 24px 11px 24px
+			margin 0
+			font-family $primary-font
+			font-weight $primary-font-weight
+			font-size 18px
+			line-height 26px
+			color $off-black
+			background #f4f4f4
+			border $background-border
+			border-radius $border-radius
+			text-align center
+
+		h5
+			float left
+			width 100%
+			padding 0
+			margin 0
+			font-family $primary-font
+			font-weight $primary-font-weight
+			font-size 15px
+			line-height 15px
+			color $paragraph
+			text-align center
+
+	// &__row
+	// 	float left
+	// 	width 100%
+	// 	padding 0
+	// 	margin 0 0 32px 0
+	//
+	// 	input
+	// 		width 236px
+	//
+	// &__half
+	// 	float left
+	// 	width 124px
+	// 	padding 0
+	// 	margin 0
+	//
+	// 	input
+	// 		width 132px
+	// 		padding 0
+	//
+	// &__half
+	// 	float: left
+	// 	//width 127px
+	// 	//padding: 0 10px;
+	// 	//margin 0
+	// 	background: $input
+	// 	box-sizing: border-box;
+	// 	border $input-border
+	// 	border-radius: $border-radius
+	// 	color: #32315E;
+	// 	outline: none;
+	// 	flex: 1;
+	// 	height: 50px;
+	// 	cursor: text;
+
+	//&__thirds
+	//	float left
+	//	width 278px
+	//	padding 0
+	//	margin 0
+	//
+	//&__third
+	//	float left
+	//	width 80px
+	//	padding 0
+	//	margin 0 9px 0 0
+
+	//&__field
+	//	float left
+	//	width 278px
+	//	padding 0
+	//	margin 0
+
+	&__input
+		float left
+		width 100%
+		padding 0
+		margin 0 0 22px 0
+
+		input
+			float left
+			width 236px
+			height 50px
+			padding 0 10px
+			margin 0
+			font-family $primary-font
+			font-weight $primary-font-weight
+			font-size 17px
+			color $off-black
+			background $input
+			border none
+			border $input-border
+			border-radius $border-radius
+			box-shadow none
+			apppearance none
+			-webkit-appearance none
+			outline none
+			text-align center
+
+	&__card
+		float left
+		width 258px
+		height: 54px
+		padding 0
+		margin 0
+		background: $white
+		border $input-border
+		box-sizing: border-box;
+		border-radius: 20px
+		outline: none
+		flex: 1;
+		cursor: text
+
+	.InputElement
+		float: left
+		width 258px
+		padding: 0 10px;
+		margin 0
+		background white;
+		box-sizing border-box;
+		font-family $primary-font
+		font-weight $primary-font-weight
+		border $input-border
+		border-radius $border-radius
+		font-size 27px !important
+		color: #32315E;
+		outline: none;
+		flex: 1;
+		height: 48px;
+		line-height: 48px;
+		cursor: text;
+
+	&__expiry
+		float left
+		width 124px
+		padding 0
+		margin 0 0 32px 0
+
+	&__gap
+		float left
+		width 10px
+		height 10px
+		padding 0
+		margin 0
+
+	button
+		float left
+		width 258px
+		height 54px
+		padding 0
+		margin 0
+		font-family $primary-font
+		font-weight $primary-font-weight
+		font-size 21px
+		color $white
+		background $red
+		border none
+		border-radius $border-radius
+		outline none
+		text-align center
+		cursor pointer
+
+	button[disabled]
+		background $black
+
+//&__mask
+//	position absolute
+//	width 132px
+//	height 42px
+//	padding 0
+//	margin 0
+//	background $input
+//	border $input-border
+//	border-radius $border-radius
+//	z-index 300
+//	pointer-events none
+//	overflow hidden
+//	cursor pointer
+//
+//	h4
+//		float left
+//		width 100%
+//		padding 0
+//		margin 0
+//		font-family $primary-font
+//		font-weight $primary-font-weight
+//		font-size 19px
+//		line-height 42px
+//		color $off-black
+//		text-align center
+//
+//&__mask.third
+//	width: 78px
+
+//&__button
+//	float left
+//	width 260px
+//	padding 8px 10px
+//	margin 14px 0 0 0
+//	background $accent
+//	border-radius $border-radius
+//	outline none
+//	cursor pointer
+//
+//	h2
+//		float left
+//		width 100%
+//		height 26px
+//		padding 0
+//		margin 0
+//		font-family $primary-font
+//		font-weight $primary-font-weight
+//		font-size 23px
+//		line-height 26px
+//		color $white
+//		text-align center
+//
+//	h3
+//		float left
+//		width 100%
+//		height 26px
+//		padding 0
+//		margin 0
+//		font-family $primary-font
+//		font-weight $primary-font-weight
+//		font-size 23px
+//		line-height 26px
+//		color $white
+//		text-align center
+//
+//	textarea
+//		float left
+//		width 240px
+//		height 26px
+//		padding 0 10px
+//		margin 0
+//		font-family $primary-font
+//		font-weight $primary-font-weight
+//		color $white
+//		font-size 23px
+//		line-height 27px
+//		background #c8c8c8
+//		border-radius $border-radius
+//		text-align center
+//
+//&__button.black
+//	background $button
+//	margin 0 0 10px 0
+//
+//&__button.financing
+//	margin 0

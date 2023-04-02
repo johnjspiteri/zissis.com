@@ -1,0 +1,26 @@
+form(id="payment-form" ng-submit="$ctrl.handleSubmit()")
+	.modal__input
+		.modal__header
+			.modal__center
+				h5 Card Number
+		.modal__field
+			#card-element.modal__card(instance="$ctrl.element")
+
+	//- .modal__gap
+
+	.modal__expiry
+		.modal__header
+			.modal__center
+				h5 Expiry
+		#expiry-element.modal__half(instance="$ctrl.expiry")
+
+	.modal__gap
+
+	.modal__expiry
+		.modal__header
+			.modal__center
+				h5 CVC
+		#cvc-element.modal__half(instance="$ctrl.cvc")
+
+	//#card-errors(role="alert") {{ $ctrl.cardErrors }}
+	button(ng-disabled='$ctrl.submitted') Purchase Now

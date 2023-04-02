@@ -1,0 +1,70 @@
+.search
+	.search__container
+		.search__square
+			.search__select
+				select(data-ng-model='vm.search.category' data-ng-change='vm.buildTags()' ng-options="category for category in vm.search.categories")
+				.search__mask
+					h4 {{vm.search.category || 'Category'}} #[span.fas.fa-caret-down]
+
+		.search__square
+			.search__select
+				select(data-ng-model='vm.search.medium' data-ng-change='vm.buildTags()' ng-options="medium for medium in vm.search.mediums")
+				.search__mask
+					h4 {{vm.search.medium || 'Medium'}} #[span.fas.fa-caret-down]
+
+		.search__filter
+			input(data-ng-model='vm.search.filter' placeholder='Filter Title')
+
+		.search__reset(data-ng-click='vm.reset()')
+			.fas.fa-times
+
+	.search__tag(data-ng-click='vm.reset()')
+		.fas.fa-times
+
+.listings
+	.listing(data-ng-repeat='product in vm.products | categoryFilter: vm.search.category | filter: {title: vm.search.filter} | orderBy: "sku"')
+		.listing__image
+			img(ng-src='data:image/{{product.images.thumb.file_type}};base64,{{product.images.thumb.base64}}')
+
+		.listing__content
+			.listing__title
+				h1(data-ng-bind='product.title')
+
+			.listing__square.price
+				.listing__caption
+					.listing__center
+						h5 Price
+				h2(data-ng-bind='"$" + ((product.price/100) | number)')
+
+			.listing__square.author
+				.listing__caption
+					.listing__center
+						h5 Author
+				h2(data-ng-bind='product.creator.name')
+
+			.listing__square.category
+				.listing__caption
+					.listing__center
+						h5 Category
+				h2(data-ng-bind='product.category')
+
+			.listing__square.sku
+				.listing__caption
+					.listing__center
+						h5 SKU
+				h2(data-ng-bind='product.sku')
+
+			.listing__square
+				p(data-ng-bind='product.description.summary')
+
+			.listing__buttons
+				.listing__button.red(ui-sref='app.product.view.purchase.transaction.detail({clean: product.clean})')
+					h4 Buy Now
+
+				.listing__button(ui-sref='app.product.view({clean: product.clean, _id: product._id})')
+					h4 Learn More
+
+	.empty(data-ng-hide='(vm.products | categoryFilter: vm.search.category | filter: {title: vm.search.filter} | orderBy: "sku").length')
+		.empty__title
+			h1 Nothing Matches Your Search Values!
+		p Please feel free to contact us if you need any help or have any questions? #[a(href='mailto:support@zissisliolios.com') support@zissisliolios.com]

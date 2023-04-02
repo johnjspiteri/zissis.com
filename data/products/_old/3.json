@@ -1,0 +1,25 @@
+{
+	"images": {
+		"thumb": {
+			"file_type": "",
+			"base64": ""
+		},
+		"detail": []
+	},
+	"category": "Book",
+	"clean": "living-from-the-heart",
+	"creator": {
+		"picture": {
+			"file_type": "",
+			"base64": ""
+		},
+		"name": "Zissis Liolios",
+		"title": "Mediator"
+	},
+	"description": "In this episode of The Peaceful Warrior, we explore how some guys get no girls, and others get a lot.",
+	"file": {},
+	"price": 29.99,
+	"title": "Living From The Heart",
+	"sku": "B1001",
+	"summary": "This is a short version of this text."
+}

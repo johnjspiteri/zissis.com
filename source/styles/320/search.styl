@@ -1,0 +1,131 @@
+.search
+	float left
+	width 310px
+	margin 0 0 28px 10px
+
+	&__container
+		float left
+		width 268px
+		padding 18px 15px 18px 15px
+		background $brown
+		border $primary-border
+		border-radius 8px
+
+	&__square
+		float left
+		width 100%
+		padding 0
+		margin 0 0 16px 0
+
+	&__select
+		float left
+		width 100%
+		padding 0
+		margin 0
+		text-align center
+
+		select
+			float: left
+			width 100%
+			height 54px
+			padding 0
+			margin 0
+			font-size 18px
+			line-height 52px
+			font-family $primary-font
+			font-weight $primary-font-weight
+			border $input-border
+			border-radius 8px
+			outline none
+			focus none
+			text-align: center
+
+	&__mask
+		position absolute
+		width 226px
+		height 52px
+		padding 0 20px
+		margin 0
+		background: $white
+		border $input-border
+		border-radius 8px
+		cursor: pointer
+		outline none
+		pointer-events none
+		z-index 70
+		text-align center
+
+		h4
+			float left
+			width 100%
+			padding 0
+			margin 0
+			font-family $primary-font
+			font-weight $primary-font-weight
+			font-size 17px
+			line-height 56px
+			color $paragraph
+			text-align center
+
+			.fa-caret-down
+				position absolute
+				right 24px
+				font-size 19px
+				line-height 54px
+				color $paragraph
+
+	&__filter
+		float left
+		width 268px
+		padding 0
+		margin 0
+
+		input
+			float left
+			width: 226px
+			height 52px
+			padding 0 20px
+			margin 0
+			font-size 18px
+			font-family $primary-font
+			font-weight $primary-font-weight
+			color $paragraph
+			background $white
+			border none
+			border $input-border
+			border-radius 8px
+			box-shadow none
+			text-align: center
+			outline: none
+			appearance none
+			-moz-appearance none
+			-webkit-appearance none
+
+		input[placeholder]
+			color $paragraph
+
+	&__reset
+		display: none;
+
+	&__tag
+		float left
+		width 40px
+		height 32px
+		padding 0
+		margin -1px 0 0 234px
+		background $brown
+		border $primary-border
+		border-top none
+		border-radius 0 0 8px 8px
+		text-align center
+		text-shadow $white-shadow
+
+		.fa-times
+			float left
+			width 100%
+			padding 0
+			margin 0
+			font-size 15px
+			line-height 33px
+			color $paragraph
+			text-align center

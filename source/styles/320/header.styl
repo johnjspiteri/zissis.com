@@ -1,0 +1,122 @@
+@-webkit-keyframes glow
+	from
+		text-shadow: 0 0 20px rgba(246,19,64, 1)
+
+	to
+		text-shadow: 0 0 20px rgba(246,19,64, .4)
+
+header
+	position relative
+	width 100%
+	padding 0
+	margin 0
+	border none
+	z-index 99
+
+nav
+	display none
+
+.header
+	position relative
+	width 100%
+	padding 0
+	margin 0
+
+	&__container
+		float left
+		width 100%
+		padding 0
+		margin 0
+
+	&__holder
+		float left
+		width 100%
+		padding 14px 0 14px 0
+		margin 0 0 38px 0
+		background $white
+		border-bottom $white-border
+
+	&__content
+		position relative
+		width 300px
+		padding 0
+		margin 0 auto
+
+	&__inline
+		display none
+
+	&__heart
+		float left
+		width 38px
+		padding 0
+		margin 0 0 0 10px
+
+		.fa-heart
+			float left
+			width 100%
+			padding 0
+			margin 0
+			font-size 20px
+			line-height 20px
+			color $red
+			text-shadow: 0 0 20px rgba(246,19,64, .4)
+			transition: all 0.5s ease;
+			-webkit-animation: glow 4s ease-in-out infinite alternate;
+			-moz-animation: glow 4s ease-in-out infinite alternate;
+			animation: glow 4s ease-in-out infinite alternate;
+
+	&__name
+		float left
+		width 188px
+		padding 0
+		margin 0
+
+		h1
+			float left
+			width 100%
+			padding 0
+			margin 0 0 11px 0
+			font-family $primary-font
+			font-weight $primary-font-weight
+			font-size 18px
+			line-height 21px
+			color $off-black
+			border none
+			text-align left
+
+	&__mobile
+		float right
+		padding 0
+		margin 0 5px 0 0
+		outline none
+		cursor pointer
+
+		.fa-bars
+			float right
+			padding 0
+			margin 0
+			font-size 25px
+			line-height 19px
+			color $off-black
+			border none
+			text-align right
+			cursor pointer
+
+	&__tagline
+		float left
+		width 280px
+		padding 0
+		margin 0 0 0 10px
+
+		h2
+			float left
+			width 100%
+			padding 0
+			margin 0
+			font-family $primary-font
+			font-style: italic
+			font-weight $primary-font-weight
+			font-size 15px
+			line-height 15px
+			color $paragraph
+			border none

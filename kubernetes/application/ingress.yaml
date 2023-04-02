@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    labels:
+        app: application
+    name: ingress
+    namespace: a
+    annotations:
+        kubernetes.io/ingress.class: nginx
+        nginx.ingress.kubernetes.io/rewrite-target: /
+        nginx.ingress.kubernetes.io/from-to-www-redirect: 'true'
+spec:
+    tls:
+    - hosts:
+      - www.zissisliolios.com
+      secretName: ssl-secret
+    rules:
+      - host: www.zissisliolios.com
+        http:
+            paths:
+              - backend:
+                  serviceName: application
+                  servicePort: test-http
+                path: /

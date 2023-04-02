@@ -1,0 +1,64 @@
+form(name='capture', id='capture', data-ng-model='vm.user', data-ng-submit='vm.submit(capture.$valid)', esc-key='::vm.close()', novalidate)
+	.modal__input
+		.modal__header
+			.modal__center
+				h5 First Name
+		input(name='name', data-ng-model='vm.user.name.first', data-ng-min='1', data-ng-max='24', ng-focus='nameFocus=false', ng-blur='nameFocus=true', capitalize='words', placeholder='', required)
+
+	.modal__input
+		.modal__header
+			.modal__center
+				h5 Last Name
+		input(name='name', data-ng-model='vm.user.name.last', data-ng-min='1', data-ng-max='24', ng-focus='nameFocus=false', ng-blur='nameFocus=true', capitalize='words', placeholder='', required)
+
+	//- .modal__gap
+
+	.modal__input.email
+		.modal__header
+			.modal__center
+				h5 Email Address
+		input(data-ng-model='vm.user.email' data-ng-model-options='{updateOn: "blur"}' tabindex='3' required)
+
+	.modal__input
+		.modal__header
+			.modal__center
+				h5 Address
+		input(data-ng-model='vm.user.address_line1' required)
+
+	//- .modal__gap
+
+	.modal__input
+		.modal__header
+			.modal__center
+				h5 Address B
+		input(data-ng-model='vm.user.address_line2')
+
+	.modal__input
+		.modal__header
+			.modal__center
+				h5 City
+		input(data-ng-model='vm.user.address_city' required)
+
+	//- .modal__gap
+
+	.modal__input
+		.modal__header
+			.modal__center
+				h5 Province
+		input(data-ng-model='vm.user.address_state' required)
+
+	.modal__input
+		.modal__header
+			.modal__center
+				h5 Postal Code
+		input(data-ng-model='vm.user.address_zip' required)
+
+	//- .modal__gap
+
+	.modal__input
+		.modal__header
+			.modal__center
+				h5 Country
+		input(data-ng-model='vm.user.address_country' required)
+
+	button(ng-disabled='capture.$invalid || vm.submitted') Submit

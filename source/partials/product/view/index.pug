@@ -1,0 +1,61 @@
+.slider
+	slick(settings='vm.slickConfig' ng-if='vm.product.images.detail')
+		div(data-ng-repeat='image in vm.product.images.detail', data-thumb='data:image/{{image.file_type}};base64,{{image.base64}}')
+			img(ng-src='data:image/{{image.file_type}};base64,{{image.base64}}')
+
+.view
+	.view__top
+		.view__title
+			h1(data-ng-bind='::vm.product.title')
+				
+		.view__purchase(ui-sref='app.product.view.purchase.transaction.detail({clean: vm.product.clean})')
+			h3 Buy Now For ${{::vm.friendly_price}}
+			
+		.view__arrow(ui-sref='app.product.list')
+			.far.fa-long-arrow-left
+
+		.view__square.author
+			.view__caption
+				.view__center
+					h5 Author
+			h2(data-ng-bind='::vm.product.creator.name')
+		
+		.view__square.category
+			.view__caption
+				.view__center
+					h5 Category
+			h2(data-ng-bind='::vm.product.category')
+				
+		.view__description
+			p.small(data-ng-bind='::vm.product.description.small')
+			p.large(data-ng-bind='::vm.product.description.large')
+
+	.view__aside
+		.view__headshot
+			img(ng-src='assets/images/about/headshot_square.png')
+		.view__square
+			.view__caption
+				.view__center
+					h5 Author
+			h2(data-ng-bind='::vm.product.creator.name')
+		.view__square
+			.view__caption
+				.view__center
+					h5 Category
+			h2(data-ng-bind='::vm.product.category')
+				
+	.view__button(ui-sref='app.product.view.purchase.transaction.detail({clean: vm.product.clean})')
+		h4 Buy Now For ${{::vm.friendly_price}}
+
+	//.view__title
+		h2 Testimonial
+
+	.view__testimonial
+		.view__bubble
+			//p(data-ng-bind='::vm.product.testimonial.statement')
+			p "{{::vm.product.testimonial.statement}}"
+		.view__caret
+		h3(data-ng-bind='::vm.product.testimonial.author')
+		.view__picture
+			//img(ng-src='data:image/{{image.file_type}};base64,{{image.base64}}')
+			img(ng-src='assets/images/testimonials/antonina.png')

@@ -1,0 +1,150 @@
+@-webkit-keyframes glow
+	from
+		text-shadow: 0 0 20px rgba(246,19,64, 1)
+
+	to
+		text-shadow: 0 0 20px rgba(246,19,64, .4)
+
+footer
+	position relative
+	width 100%
+
+.footer
+	float left
+	width 100%
+	height 620px
+	padding 28px 0 0 0
+	background $brown
+	border-top $white-border
+
+	&__row
+		float left
+		width 100%
+		padding 0
+		margin 0
+
+	&__brand
+		float left
+		width 100%
+		padding 0
+		margin 0
+
+	&__heart
+		float left
+		width 42px
+		padding 0
+		margin 0
+
+		.fa-heart
+			float left
+			width 100%
+			padding 0
+			margin 0
+			font-size 20px
+			line-height 20px
+			color $red
+			text-shadow: 0 0 20px rgba(246,19,64, .4)
+			transition: all 0.5s ease;
+			-webkit-animation: glow 4s ease-in-out infinite alternate;
+			-moz-animation: glow 4s ease-in-out infinite alternate;
+			animation: glow 4s ease-in-out infinite alternate;
+
+	&__holder
+		position relative
+		width 320px
+		margin 0 auto
+
+		h1
+			float left
+			margin 0 0 11px 0
+			font-family $primary-font
+			font-weight $primary-font-weight
+			font-size 18px
+			line-height 21px
+			color $off-black
+			text-align left
+			border none
+
+		h2
+			float left
+			padding 0
+			margin 0 0 28px 0
+			font-family $primary-font
+			font-style italic
+			font-weight $primary-font-weight
+			font-size 15px
+			line-height 15px
+			color #686868
+			border none
+
+		a
+			float left
+			padding 0
+			margin 0 0 8px 0
+			font-family $primary-font
+			font-weight $primary-font-weight
+			font-size 15px
+			line-height 30px
+			color #686868
+			text-align left
+
+	&__company
+		float left
+		width 240px
+		padding 0 0 0 20px
+		margin 0 0 42px 0
+
+	&__about
+		float left
+		width 280px
+		padding 0
+		margin 0 0 0 20px
+
+	&__cv
+		float left
+		width 100%
+		padding 0
+		margin 0 0 42px 0
+
+		p
+			width 270px
+			padding 0
+			margin 0
+			font-family $primary-font
+			font-size 15px
+			line-height 29px
+			color $paragraph
+
+	&__social
+		float left
+		width 240px
+		padding 0
+		margin 0 0 0 20px
+
+		a
+			border none
+
+		.fa-facebook-f
+		.fa-twitter
+		.fa-instagram
+			float left
+			width 50px
+			height 50px
+			margin 0 18px 0 0
+			font-size 23px
+			line-height 52px
+			background $red
+			color $white
+			border-radius 10px
+			text-align center
+
+		.fa-facebook-f
+			font-size 23px
+			line-height 51px
+
+		.fa-instagram
+			font-size 27px
+			line-height 52px
+
+	&__picture
+		display none
